@@ -1,0 +1,16 @@
+# Claude Code / editor tooling
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# KiCad backups & history
+*-backups/
+fp-info-cache
+*.bak
+.history
+
+# Arduino build output
+build/
+*.hex
+*.elf
