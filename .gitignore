@@ -4,11 +4,13 @@
 .DS_Store
 Thumbs.db
 
-# KiCad backups & history
+# KiCad backups, history & lock files
 *-backups/
 fp-info-cache
 *.bak
 .history
+*.lck
+~*.lck
 
 # Arduino build output
 build/
