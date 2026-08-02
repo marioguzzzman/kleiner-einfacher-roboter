@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 1.0,
+          "height": 1.778,
+          "width": 1.778
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -69,8 +69,31 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        [
+          "unconnected_items|108500000|124040000|F.Cu|4|ab81e0ab-8dff-47a6-bd7e-7cdac43968bc|1807f69f-96dc-4acf-af50-008fa36d9d75",
+          "VCC connector from motor go to 3.3v in esp32 connected in other board"
+        ],
+        [
+          "unconnected_items|72090000|126023000|F.Cu|4|f5b91f3e-5fc8-425a-bd69-a5b39356c172|247072e6-2965-4ba0-b5e6-a7e454423550",
+          "VCC connector from motor go to 3.3v in esp32 connected in other board"
+        ],
+        [
+          "unconnected_items|74630000|126023000|F.Cu|4|247072e6-2965-4ba0-b5e6-a7e454423550|cfe282de-572a-4609-8ed7-dbdf9692b6ca",
+          "VCC connector from motor go to 3.3v in esp32 connected in other board"
+        ],
+        [
+          "unconnected_items|81061000|126515500|F.Cu|4|f01d926f-e462-4048-a40b-1cb4d3e8371e|cd701a13-c3fa-4438-8619-46a1b020c3d4",
+          "VCC connector from motor go to 3.3v in esp32 connected in other board"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -203,7 +226,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2,
+        0.8
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +257,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -260,7 +292,16 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "multiple_net_names|1397000|660400|4c78a08b-d653-4f77-8d1a-0a96cffc5030|35a80b0f-ce59-4281-9f40-6bc5c81fa52b|/f1655cfe-83e1-41ea-abb9-2ed14b911855|/f1655cfe-83e1-41ea-abb9-2ed14b911855|/f1655cfe-83e1-41ea-abb9-2ed14b911855",
+        "HC sensor VCC connects to 5V"
+      ],
+      [
+        "multiple_net_names|927100|939800|4c78a08b-d653-4f77-8d1a-0a96cffc5030|4a56183a-1f5b-4e72-bb0e-ca5d1f864dfa|/f1655cfe-83e1-41ea-abb9-2ed14b911855|/f1655cfe-83e1-41ea-abb9-2ed14b911855|/f1655cfe-83e1-41ea-abb9-2ed14b911855",
+        "VCC connector from motor go to 3.3v in esp32"
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -511,6 +552,17 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.3,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.8,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
       }
     ],
     "meta": {
@@ -518,7 +570,28 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Power",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "3.3V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "G"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+5V"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -598,12 +671,114 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Check_prices",
+          "name": "Check_prices",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "CREATOR",
+          "name": "CREATOR",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MANUFACTURER",
+          "name": "MANUFACTURER",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MAXIMUM_PACKAGE_HEIGHT",
+          "name": "MAXIMUM_PACKAGE_HEIGHT",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MF",
+          "name": "MF",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MP",
+          "name": "MP",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PARTREV",
+          "name": "PARTREV",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Price",
+          "name": "Price",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Purchase-URL",
+          "name": "Purchase-URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SnapEDA_Link",
+          "name": "SnapEDA_Link",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SNAPEDA_PACKAGE_ID",
+          "name": "SNAPEDA_PACKAGE_ID",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "STANDARD",
+          "name": "STANDARD",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "VERIFIER",
+          "name": "VERIFIER",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Availability",
+          "name": "Availability",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
