@@ -64,7 +64,7 @@
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
-          "remove_islands": 0,
+          "remove_islands": 1,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
@@ -78,20 +78,12 @@
       ],
       "drc_exclusions": [
         [
-          "unconnected_items|108500000|124040000|F.Cu|4|ab81e0ab-8dff-47a6-bd7e-7cdac43968bc|1807f69f-96dc-4acf-af50-008fa36d9d75",
-          "VCC connector from motor go to 3.3v in esp32 connected in other board"
+          "courtyards_overlap|122153946|118166872|0e6fef96-3fa5-4ed8-9fbd-98382b73451c|9d512a18-5999-49a5-b039-b586c0ee78b1",
+          "VCC connector from motor go to 3.3v in esp32 connected in other board not a real footprint"
         ],
         [
-          "unconnected_items|72090000|126023000|F.Cu|4|f5b91f3e-5fc8-425a-bd69-a5b39356c172|247072e6-2965-4ba0-b5e6-a7e454423550",
-          "VCC connector from motor go to 3.3v in esp32 connected in other board"
-        ],
-        [
-          "unconnected_items|74630000|126023000|F.Cu|4|247072e6-2965-4ba0-b5e6-a7e454423550|cfe282de-572a-4609-8ed7-dbdf9692b6ca",
-          "VCC connector from motor go to 3.3v in esp32 connected in other board"
-        ],
-        [
-          "unconnected_items|81061000|126515500|F.Cu|4|f01d926f-e462-4048-a40b-1cb4d3e8371e|cd701a13-c3fa-4438-8619-46a1b020c3d4",
-          "VCC connector from motor go to 3.3v in esp32 connected in other board"
+          "npth_inside_courtyard|122600000|121383557|c702a454-d015-4c65-ae92-b7a910a757d3|0e6fef96-3fa5-4ed8-9fbd-98382b73451c",
+          ""
         ]
       ],
       "meta": {
@@ -590,6 +582,10 @@
       {
         "netclass": "Power",
         "pattern": "+5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3V"
       }
     ]
   },
@@ -597,7 +593,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "C:/Users/mario/Downloads/v4 PCB/",
       "specctra_dsn": "",
       "vrml": ""
     },
