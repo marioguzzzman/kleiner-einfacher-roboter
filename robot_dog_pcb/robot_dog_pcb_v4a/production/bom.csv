@@ -1,0 +1,11 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+C1,C_Radial_D10.0mm_H12.5mm_P5.00mm,1,1000uF,
+J1,AMASS_XT30PW-M_1x02_P2.50mm_Horizontal,1,MAIN POWER,
+"J2, J4",PinSocket_1x03_P2.54mm_Vertical,2,GPIO,
+J3,PinSocket_1x04_P2.54mm_Vertical,1,HC-SR04,
+"J5, J6",PinSocket_1x03_P2.54mm_Vertical,2,Extra power,
+R2,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,1,2K,
+R3,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,1,1k,
+U1,MODULE_ESP32-C3_SUPERMINI_TH,1,ESP32-C3_SUPERMINI_TH,
+U2,Adafruit-MAX98357-I2S-Amp-Breakout,1,MAX98357-I2S-Amp,
+U3,PCB ONLY Adafruit-16-Channel-PWM-Servo-Driver-PCB,1,Adafruit-16-Channel-PWM-Servo-Driver-PCB,
